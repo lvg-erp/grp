@@ -1,4 +1,4 @@
-module github.com/lvg-erp/grpc
+module github.com/lvg-erp/grp
 
 go 1.22.3
 

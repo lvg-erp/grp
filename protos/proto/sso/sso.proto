@@ -1,0 +1,38 @@
+  syntax = "proto3";
+
+  package auth;
+
+  option go_package = "vladimir.sso.v1;ssov1";
+
+  service Auth {
+      rpc Register (RegisterRequest) returns (RegisterResponse);
+      rpc Login (LoginRequest) returns (LoginResponse);
+      rpc IsAdmin (IsAdminRequest) returns (IsAdminResponse);
+  }
+
+  message RegisterRequest {
+    string email = 1; //email to user registration
+    string password = 2; // password of user to registration
+  }
+
+  message RegisterResponse {
+    int64 user_id = 1; //user ID of registration user
+  }
+
+  message LoginRequest {
+    string email = 1; // email of user to login
+    string password = 2; //password of user to login
+    int32 app_id = 3; //ID of the app to login
+  }
+
+  message LoginResponse {
+    string token = 1; //auth token of the logged in user
+  }
+
+  message IsAdminRequest {
+    int64 user_id = 1; //user id to validate
+  }
+
+  message IsAdminResponse {
+    bool is_admin = 1; //indicates whether the user is an admin
+  }

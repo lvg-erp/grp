@@ -5,8 +5,10 @@
     Data - общение с БД
 #################################################################
 Для корректной отправки на ГИТ 
+чтобы потом корректно подтягивался
+в другой проект 
 необходимо сгенерить мод файл
-так
+так#################################
 go mod init github.com/lvg-erp/grpc
 
 
@@ -38,25 +40,5 @@ task generate
 {проработать для закрытого репозитория}
 /Project/go/grpc/protos$ go get github.com/ilyakaznacheev/cleanenv
 
-[//]: # (ПЕРЕХОДИМ в директорию sso &#40;но прежде проект нужно опубликовать на гите&#41;)
-
-[//]: # ()
-[//]: # (/Project/go/grpc/protos$ go get github.com/ilyakaznacheev/cleanenv)
-
-[//]: # ()
-[//]: # (установка конфигурационного пути)
-
-[//]: # (CONFIG_PATH=./path/to/config/file.yaml sso)
-
-[//]: # (or)
-
-[//]: # (sso --config=./path...)
-
-[//]: # ()
-[//]: # (создаем mod)
-
-[//]: # (тянем версию прота)
-
-[//]: # (/Project/go/grpc/sso$ go get github.com/lvg-erp/grpc/protos)
 
     
